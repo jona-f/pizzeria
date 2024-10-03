@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don Remolo Pizza</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/6fa2f1a717.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand logo" href="/index.html">
+                <img src="./img/logo.jpg" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#menu">Menú</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pedido">Mi Pedido</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="menu" class="container">
+        <h1 class="text-center my-4">Menú de Pedidos by JF</h1>
+
+        <!-- Filtros de Categorías -->
+        <div class="text-center mb-4">
+            <button class="btn btn-outline-primary me-2" onclick="filtrarCategoria('pizza')">Pizzas</button>
+            <button class="btn btn-outline-primary me-2" onclick="filtrarCategoria('empanada')">Empanadas</button>
+            <button class="btn btn-outline-primary me-2" onclick="filtrarCategoria('bebida')">Bebidas</button>
+            <button class="btn btn-outline-primary me-2" onclick="filtrarCategoria('postre')">Postres</button>
+            <button class="btn btn-outline-secondary" onclick="filtrarCategoria('todos')">Ver Todos</button>
+        </div>
+
+        <!-- Categoría Pizzas -->
+        <h2>Pizzas</h2>
+        <div class="row categoria pizza">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./img/muzzarella.jpg" class="card-img-top" alt="Pizza Muzzarella">
+                    <div class="card-body">
+                        <h5 class="card-title">Pizza Muzzarella</h5>
+                        <p class="card-text">Deliciosa pizza con tomate y queso</p>
+                        <p class="card-text"><strong>Precio: $350</strong></p>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" id="pizzaNapolitanaQty" value="1" min="1">
+                            <button class="btn btn-primary"
+                                onclick="agregarPedido('Pizza Muzzarella', 350, 'pizzaNapolitanaQty')">Agregar al
+                                Pedido</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./img/jamonymorron.jpg" class="card-img-top" alt="Pizza Jamon y Morron">
+                    <div class="card-body">
+                        <h5 class="card-title">Pizza Jamon y Morron</h5>
+                        <p class="card-text">Deliciosa pizza con Jamon y Morrones</p>
+                        <p class="card-text"><strong>Precio: $450</strong></p>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" id="pizzaNapolitanaQty" value="1" min="1">
+                            <button class="btn btn-primary"
+                                onclick="agregarPedido('Pizza Jamon y Morron', 450, 'pizzaNapolitanaQty')">Agregar al
+                                Pedido</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./img/napolitana.jpg" class="card-img-top" alt="Pizza Napolitana">
+                    <div class="card-body">
+                        <h5 class="card-title">Pizza Napolitana</h5>
+                        <p class="card-text">Deliciosa pizza con tomate y albahaca.</p>
+                        <p class="card-text"><strong>Precio: $500</strong></p>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" id="pizzaNapolitanaQty" value="1" min="1">
+                            <button class="btn btn-primary"
+                                onclick="agregarPedido('Pizza Napolitana', 500, 'pizzaNapolitanaQty')">Agregar al
+                                Pedido</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categoría Empanadas -->
+        <h2>Empanadas</h2>
+        <div class="row categoria empanada">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./img/empanada_jamonyqueso.jpg" class="card-img-top" alt="Empanada de Jamon y Queso">
+                    <div class="card-body">
+                        <h5 class="card-title">Empanada de Jamon y Queso</h5>
+                        <p class="card-text">Empanadas tradicionales de jamon y queso.</p>
+                        <p class="card-text"><strong>Precio: $100</strong></p>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" id="empanadaCarneQty" value="1" min="1">
+                            <button class="btn btn-primary"
+                                onclick="agregarPedido('Empanada de JyQ', 100, 'empanadaCarneQty')">Agregar al
+                                Pedido</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./img/empanada_carne.jpg" class="card-img-top" alt="Empanada de Carne">
+                    <div class="card-body">
+                        <h5 class="card-title">Empanada de Carne</h5>
+                        <p class="card-text">Empanadas tradicionales de carne.</p>
+                        <p class="card-text"><strong>Precio: $100</strong></p>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" id="empanadaCarneQty" value="1" min="1">
+                            <button class="btn btn-primary"
+                                onclick="agregarPedido('Empanada de Carne', 100, 'empanadaCarneQty')">Agregar al
+                                Pedido</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./img/empanada_atun.jpg" class="card-img-top" alt="Empanada de Atun">
+                    <div class="card-body">
+                        <h5 class="card-title">Empanada de Atun</h5>
+                        <p class="card-text">Empanadas tradicionales de Atun.</p>
+                        <p class="card-text"><strong>Precio: $100</strong></p>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" id="empanadaCarneQty" value="1" min="1">
+                            <button class="btn btn-primary"
+                                onclick="agregarPedido('Empanada de Atun', 100, 'empanadaCarneQty')">Agregar al
+                                Pedido</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Categoría Bebidas -->
+        <h2>Bebidas</h2>
+        <div class="row categoria bebida">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./img/gaseosa.jpg" class="card-img-top" alt="Pepsi">
+                    <div class="card-body">
+                        <h5 class="card-title">Pepsi</h5>
+                        <p class="card-text">Bebida gaseosa Pepsi.</p>
+                        <p class="card-text"><strong>Precio: $150</strong></p>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" id="cocaColaQty" value="1" min="1">
+                            <button class="btn btn-primary" onclick="agregarPedido('Pepsi', 150, 'cocaColaQty')">Agregar
+                                al Pedido</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./img/agua.jpg" class="card-img-top" alt="Agua">
+                    <div class="card-body">
+                        <h5 class="card-title">Coca Cola</h5>
+                        <p class="card-text">Bebida Agua.</p>
+                        <p class="card-text"><strong>Precio: $100</strong></p>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" id="cocaColaQty" value="1" min="1">
+                            <button class="btn btn-primary" onclick="agregarPedido('Agua', 150, 'cocaColaQty')">Agregar
+                                al Pedido</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categoría Postres -->
+        <h2>Postres</h2>
+        <div class="row categoria postre">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./img/almendrado.jpg" class="card-img-top" alt="Almendrado">
+                    <div class="card-body">
+                        <h5 class="card-title">Helado Almendrado</h5>
+                        <p class="card-text">Almendrado</p>
+                        <p class="card-text"><strong>Precio: $250</strong></p>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" id="flanCaseroQty" value="1" min="1">
+                            <button class="btn btn-primary"
+                                onclick="agregarPedido('Almendrado', 250, 'flanCaseroQty')">Agregar al Pedido</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./img/bombones.jpg" class="card-img-top" alt="bombones">
+                    <div class="card-body">
+                        <h5 class="card-title">Bombones caceros</h5>
+                        <p class="card-text">Bombones.</p>
+                        <p class="card-text"><strong>Precio: $300</strong></p>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" id="flanCaseroQty" value="1" min="1">
+                            <button class="btn btn-primary"
+                                onclick="agregarPedido('Bombones Caceros', 300, 'flanCaseroQty')">Agregar al
+                                Pedido</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="./img/helado.jpg" class="card-img-top" alt="Helado bombon">
+                    <div class="card-body">
+                        <h5 class="card-title">Helado</h5>
+                        <p class="card-text">Helado Bombon.</p>
+                        <p class="card-text"><strong>Precio: $150</strong></p>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" id="flanCaseroQty" value="1" min="1">
+                            <button class="btn btn-primary"
+                                onclick="agregarPedido('Helado Bombon', 150, 'flanCaseroQty')">Agregar al
+                                Pedido</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vista del Pedido -->
+        <h2 class="my-4">Mi Pedido</h2>
+        <div id="pedido" class="border p-3">
+            <p>No hay productos en el pedido.</p>
+        </div>
+
+        <!-- Total y Checkout -->
+        <div class="mt-4">
+            <h4>Total: $<span id="total">0</span></h4>
+            <button class="btn btn-success" onclick="confirmarPedido()">Confirmar Pedido</button>
+        </div>
+    </div>
+
+    <footer class="footer bg-dark text-white pt-4">
+        <div class="container text-center">
+            <h5>Proyecto de muestra por Jonathan Fajardo</h5>
+            <div class="social-icons mt-3">
+                <a href="https://jona-f.github.io/Portfolio/" target="_blank" class="text-white me-4">
+                    <i class="fa-solid fa-briefcase"></i>
+                </a>
+                <a href="https://github.com/jona-f" target="_blank" class="text-white me-4">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/fajardo.jona/" target="_blank" class="text-white me-4">
+                    <i class="fab fa-instagram fa-2x"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/jona-fajardo/" target="_blank" class="text-white">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+            </div>
+            <p class="mt-4">&copy; 2024 Mi Sitio Web. Todos los derechos reservados Jonathan Fajardo.</p>
+        </div>
+    </footer>
+
+
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

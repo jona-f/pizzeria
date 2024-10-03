@@ -1,0 +1,54 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+#pedido {
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+input[type="number"] {
+    width: 60px;
+}
+
+.logo {
+    display: flex;
+    width: 120px;
+    height: 90px;
+}
+
+.container h2 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Lucida Sans';
+}
+
+.mt-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pedido p {
+    display: flex;
+    justify-content: center;
+}
+
+/* footer */
+.footer {
+    background-color: #343a40;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.footer .social-icons a {
+    color: #fff;
+}
